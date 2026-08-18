@@ -1172,6 +1172,13 @@ tentangModal.innerHTML = `
 `;
 
 document.body.appendChild(tentangModal);
+document.getElementById("menu-tentang").addEventListener("click", function () {
+    tentangModal.classList.add("aktif");
+});
+
+document.getElementById("tutup-tentang").addEventListener("click", function () {
+    tentangModal.classList.remove("aktif");
+});
 
         /* ================= HEADER ================= */
 
