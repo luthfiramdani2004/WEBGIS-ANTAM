@@ -948,7 +948,7 @@
                 </div>
 
 
-                <div class="sidebar-menu"> id="menu-tentang">
+                <div class="sidebar-menu"> 
                     <span>ⓘ</span>
                     <span>Tentang</span>
                 </div>
@@ -1154,30 +1154,7 @@
         `;
 
         document.body.appendChild(sidebar);
-		var tentangModal = document.createElement("div");
-tentangModal.id = "tentang-modal";
-
-tentangModal.innerHTML = `
-    <div class="tentang-box">
-        <button id="tutup-tentang">×</button>
-
-        <h2>Tentang WebGIS</h2>
-
-        <p>
-            WebGIS ini merupakan media informasi spasial
-            untuk mendukung penyajian peta dan informasi
-            terkait jalur evakuasi tambang.
-        </p>
-    </div>
-`;
-
-document.body.appendChild(tentangModal);
-document.getElementById("menu-tentang").addEventListener("click", function () {
-    tentangModal.classList.add("aktif");
-});
-
-document.getElementById("tutup-tentang").addEventListener("click", function () {
-    tentangModal.classList.remove("aktif");
+		
 });
 
         /* ================= HEADER ================= */
