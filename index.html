@@ -856,11 +856,11 @@
 
             <div id="sidebar-header">
 
-                <img
-                    src="images/Antam-Logo-Colored.png"
-                    alt="Logo Antam"
-                    id="sidebar-logo"
-                >
+    <img
+    id="sidebar-logo"
+    alt="Logo Antam"
+    style="width:150px;height:75px;object-fit:contain;"
+>
 
             </div>
 
@@ -1794,6 +1794,50 @@
         buatDashboard
     );
 
+
+})();
+</script>
+		<script>
+(function () {
+
+    const candidates = [
+        "images/logo-antam.png",
+        "./images/logo-antam.png",
+        "images/Antam Logo - Colored - zonalogo.com (1).png",
+        "./images/Antam Logo - Colored - zonalogo.com (1).png",
+        "images/Antam%20Logo%20-%20Colored%20-%20zonalogo.com%20%281%29.png"
+    ];
+
+    const logo = document.getElementById("sidebar-logo");
+
+    if (!logo) return;
+
+    let i = 0;
+
+    function cobaLogo() {
+
+        if (i >= candidates.length) {
+            console.warn("Logo ANTAM tidak ditemukan.");
+            return;
+        }
+
+        const url = candidates[i++];
+
+        const test = new Image();
+
+        test.onload = function () {
+            logo.src = url;
+            console.log("Logo ANTAM ditemukan:", url);
+        };
+
+        test.onerror = function () {
+            cobaLogo();
+        };
+
+        test.src = url;
+    }
+
+    cobaLogo();
 
 })();
 </script>
