@@ -856,10 +856,10 @@
 
             <div id="sidebar-header">
 
-              <img
-    src="images/logo-antam.png"
-    alt="Logo Antam"
+ <img
     id="sidebar-logo"
+    alt="Logo Antam"
+    style="width:150px;height:75px;object-fit:contain;"
 >
 
             </div>
@@ -1794,6 +1794,64 @@
         buatDashboard
     );
 
+
+})();
+</script>
+		
+<!-- =========================================================
+     FIX LOGO ANTAM
+     ========================================================= -->
+
+<script>
+(function () {
+
+    function pasangLogo() {
+
+        var logo = document.getElementById("sidebar-logo");
+
+        if (!logo) {
+            setTimeout(pasangLogo, 300);
+            return;
+        }
+
+        var daftarLogo = [
+            "images/logo-antam.png",
+            "images/Antam Logo - Colored - zonalogo.com (1).png",
+            "images/Antam%20Logo%20-%20Colored%20-%20zonalogo.com%20%281%29.png",
+            "logo-antam.png",
+            "Antam Logo - Colored - zonalogo.com (1).png"
+        ];
+
+        var nomor = 0;
+
+        function cobaLogo() {
+
+            if (nomor >= daftarLogo.length) {
+                console.error("Logo ANTAM tidak ditemukan.");
+                return;
+            }
+
+            var alamat = daftarLogo[nomor];
+            var gambar = new Image();
+
+            gambar.onload = function () {
+                logo.src = alamat;
+                console.log("Logo ANTAM ditemukan:", alamat);
+            };
+
+            gambar.onerror = function () {
+                nomor++;
+                cobaLogo();
+            };
+
+            gambar.src = alamat;
+        }
+
+        cobaLogo();
+
+    }
+
+    pasangLogo();
 
 })();
 </script>
