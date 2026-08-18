@@ -1,0 +1,1 @@
+var json_Titik_Admin_4 = {"type":"FeatureCollection","name":"Titik_Admin_4","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"OBJECTID":"1","Nama":"Admin","X":673609.373,"Y":9263750.284,"Z":566.945},"geometry":{"type":"Point","coordinates":[106.570504164390002,-6.658285326003773]}}]}

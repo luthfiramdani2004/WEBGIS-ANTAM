@@ -1,0 +1,1 @@
+var json_new_layer_5 = {"type":"FeatureCollection","name":"new_layer_5","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"Faskes":"Puskesmas Antam"},"geometry":{"type":"Point","coordinates":[106.570820278821458,-6.657980788134841]}}]}
